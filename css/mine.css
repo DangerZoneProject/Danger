@@ -1,0 +1,51 @@
+html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+    }
+
+#panel {
+        position: absolute;
+        top: 0px;
+        /* left: -10px; */
+        /*margin-left: -180px;*/
+        z-index: 5;
+/*        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;*/
+}
+
+#botoes-heatmap{
+	    position: absolute;
+        top: 0px;
+		left: -10px;
+        margin-left: -180px;        
+        z-index: 5;
+		background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+
+}
+
+
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+  }
+  .sidebar-nav .navbar ul:not {
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
