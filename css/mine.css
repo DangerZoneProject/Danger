@@ -16,15 +16,14 @@ html, body, #map-canvas {
 }
 
 #botoes-heatmap{
-	    position: absolute;
-        top: 0px;
-		left: -10px;
-        margin-left: -180px;        
-        z-index: 5;
-		background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
-
+      position: absolute;
+      top: 0px;
+      left: -10px;        
+      margin-left: 280px;  
+      text-align: center;     
+      z-index: 5;   
+      background-color: #009688;
+      padding: inherit;   
 }
 
 
