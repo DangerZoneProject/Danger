@@ -6,10 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+import java.util.Random;
+
 import util.DAOFactory;
 import dao.RuaDAO;
 import dominio.Rua;
-
 import json.JSONArray;
 import json.JSONException;
 import json.JSONObject;
@@ -22,38 +23,25 @@ public class Home {
 	private static List<Rua> ruas = rd.listar();
 	
 	private static JSONArray array = new JSONArray();
-	private static JSONObject jsonTeste2 = new JSONObject();
-	private static JSONObject jsonTeste3 = new JSONObject();
-	
+
 	public static void main(String[] args) {
 		
 		try {	                
 			for (Rua rua:ruas){		    
 		    JSONObject jsonTeste = new JSONObject();
 		
-		    jsonTeste.put("latitude", rua.getLatitude());
-		    jsonTeste.put("longitude", rua.getLongitude());		                
-		   // jsonTeste.put("Pontuacao", rua.getPontuacao());
+		    jsonTeste.put("Pontuacao", rua.getPontuacao());
+		    jsonTeste.put("Latitude", rua.getLatitude());
+		    jsonTeste.put("Longitude", rua.getLongitude());		                
 		    
 		    array.put(jsonTeste);
 			}
-			jsonTeste3.put("ocorrencias", jsonTeste2);
-		    jsonTeste2.put("ocorrencia", array);
-			
-		    System.out.println(jsonTeste3);
+		    
+		    System.out.println("JSONArray: "+ array);
 		                        
 		    } catch (JSONException e) {
 		        e.printStackTrace();
-		    }
-		
-		try {
-			writeFile = new FileWriter("WebContent/dados.json");
-			writeFile.write(jsonTeste3.toString());
-			writeFile.close();
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		    }	
 		
 		/*
 		try{

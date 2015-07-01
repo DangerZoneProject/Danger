@@ -13,7 +13,7 @@ public class ConnectionFactory {
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			return  DriverManager.getConnection("jdbc:mysql://localhost/dangerzone","root","root");
+			return  DriverManager.getConnection("jdbc:mysql://localhost/dangerzone","root","");
 		} catch (SQLException ex) {
 			Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE,null,ex);
 			throw new RuntimeException("Erro SqlException ao abrir conexão  em ConectionFactory",ex);
